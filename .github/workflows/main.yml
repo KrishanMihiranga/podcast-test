@@ -1,5 +1,9 @@
 name: Generate Podcast Feeds
-on: [push]
+on:
+  push:
+    branches:
+      - main  # Adjust the branch name as needed
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,4 +27,3 @@ jobs:
           git add .
           git commit -m "Modified Feed"
           git push
-      
